@@ -21,11 +21,13 @@ The code creates a shared memory object, a bitmap, and initializes a console UI.
      
 
 ## PB
-The code creates a shared memory object, a bitmap, and initializes a console UI. It enters an infinite loop where it waits for user input. If the user resizes the screen, the UI is redrawn. If the user presses the print button, a bitmap image is saved and the print_flag is set to true. If the user presses an arrow key, the position of a circle on the bitmap is changed and the bitmap is recreated. The update_shared_memory() function updates the shared memory object with the green value of each pixel in the bitmap. The program ends when the user closes the console UI.
+
 
 ## Compiling and running **processA** and **processB**
 The two processes have been implemented as UIs using the ncurses library. Therefore, it is necessary to compile their source files by linking the shared library through -lncurses. Similar to the first assignment, use the resize event of the windows to handle situations where the graphical elements do not spawn correctly.
 
+
+## How Run Code**
 ```
 clear
 gcc ./src/master.c -lm -lrt  -o ./bin/master
